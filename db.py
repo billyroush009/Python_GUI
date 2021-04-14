@@ -15,9 +15,11 @@ def db_launch():
     # Databases
     db_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), 'database', 'address_book.db'))
     print(db_path)
+    db_path.strip('\n')
+    print(db_path)
 
     # If the database doesn't exist, creates w/ table and fields
-    if not path.exists(db_path.strip('\n')):
+    if not path.exists(db_path):
         connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
