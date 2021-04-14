@@ -1,5 +1,7 @@
 # Python_GUI
 
+### Video Demo: https://www.youtube.com/watch?v=5IodgAEru9s
+
 ### Setup:
 Make sure you have the latest version of Python installed as well as Git. Open Git in the directory you'd like the app saved in. 
 
