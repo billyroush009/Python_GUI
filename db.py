@@ -14,7 +14,7 @@ def db_launch():
 
     # Databases
     db_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), 'database', 'address_book.db'))
-    print(db_path)
+    print(db_path.strip('/n'))
     db_path.strip('\n')
     print(db_path)
 
