@@ -6,7 +6,7 @@ import sqlite3
 
 def db_launch():
     sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
-    print(sun_icon_path)
+    #print(sun_icon_path)
 
     db_window = Toplevel()
     db_window.title('SQL Databases')
@@ -14,7 +14,7 @@ def db_launch():
 
     # Databases
     db_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), 'database', 'address_book.db'))
-    print(db_path)
+    #print(db_path)
     #print(os.stat(db_path))
 
     # If the database doesn't exist, creates w/ table and fields
@@ -180,7 +180,7 @@ def db_launch():
         global edit_window
         edit_window = Tk()
         edit_window.title('Update a Record')
-        edit_window.iconbitmap('images/sun.ico')
+        edit_window.iconbitmap(sun_icon_path)
         edit_window.geometry("400x300")
 
         # Create a database or connect to one, must re-establish in function
