@@ -13,9 +13,11 @@ def image_launch():
 
     #method to load all .png pictures in the "images" folder into the list instead of statically assigning
     image_list = []
-    path = "images"
+    #path = "images"
+    path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images'))
     #list of valid image types, using .png and jpg for this example
     valid_images = [".png", ".jpg"]
+    print(os.listdir(path))
     for image in os.listdir(path):
         #ext used as a check for each file in the directory, splits off the "extension"
         ext = os.path.splitext(image)[1]
