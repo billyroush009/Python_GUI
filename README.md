@@ -30,5 +30,8 @@ Contents for the image viewing application. This application reads in all the .p
 ## db.py:
 This file contains all the design and logic to make the database portion of this app function. It establishes a connection to the "address_book" database if it exists and will otherwise create it with all the proper tables. Hitting the "submit" button will enter the information from the boxes above into the database and the "show records" button will display them at the bottom of the window. By entering in the primary key of an existing record into the "Select ID" entry field, the user can utilize the "Delete Record" and "Edit Record" buttons below.
 
+## message.py:
+Contains the design and logic for the pop up samples app. This app lets the user select what type of messagebox will be displayed in either a list of radio buttons or from a drop down menu. A button below either will generate a sample message reflecting what has been chosen.
+
 ## weather.py:
 File for all the relevant components of the weather API app. This app let's a user enter a ZIP code then calls on three seperate API's to display information about their air quality or other weather conditions below. The color of the screen will change depending on the level of air pollutants. Each time the ZIP code is searched the information will be updated.
