@@ -15,7 +15,7 @@ def db_launch():
     # Databases
     db_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), 'database', 'address_book.db'))
     #print(db_path)
-    #print(os.stat(db_path))
+    print(os.stat(db_path))
 
     # If the database doesn't exist, creates w/ table and fields
     if not path.exists(db_path):
