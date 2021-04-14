@@ -17,7 +17,7 @@ def db_launch():
     print(db_path)
 
     # If the database doesn't exist, creates w/ table and fields
-    if not path.exists(db_path):
+    if not path.exists(db_path.strip('\n')):
         connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
