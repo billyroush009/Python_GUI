@@ -1,11 +1,15 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
+import os
 
 def calculator_launch():
+    sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
+    print(sun_icon_path)
+
     calc_window = Toplevel()
     calc_window.title('Simple Calculator')
-    calc_window.iconbitmap('images/sun.ico')
+    calc_window.iconbitmap(sun_icon_path)
 
     e = Entry(calc_window, width=35, borderwidth=5)
     e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)

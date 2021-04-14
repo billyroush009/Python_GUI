@@ -3,9 +3,12 @@ from PIL import ImageTk,Image
 import os, os.path
 
 def image_launch():
+    sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
+    print(sun_icon_path)
+
     image_window = Toplevel()
     image_window.title('Image Viewer')
-    image_window.iconbitmap('images/sun.ico')
+    image_window.iconbitmap(sun_icon_path)
     image_window.geometry("185x175")
 
     #method to load all .png pictures in the "images" folder into the list instead of statically assigning

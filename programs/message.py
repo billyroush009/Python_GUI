@@ -1,11 +1,15 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
+import os
 
 def message_launch():
+    sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
+    print(sun_icon_path)
+
     msg_window = Toplevel()
     msg_window.title('Message Demo')
-    msg_window.iconbitmap('images/sun.ico')
+    msg_window.iconbitmap(sun_icon_path)
     msg_window.geometry("300x425")
 
     MODES = [

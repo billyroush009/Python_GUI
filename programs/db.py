@@ -1,12 +1,16 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from os import path
+import os
 import sqlite3
 
 def db_launch():
+    sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
+    print(sun_icon_path)
+
     db_window = Toplevel()
     db_window.title('SQL Databases')
-    db_window.iconbitmap('images/sun.ico')
+    db_window.iconbitmap(sun_icon_path)
 
     # Databases
 

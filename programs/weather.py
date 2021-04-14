@@ -2,11 +2,15 @@ from tkinter import *
 from PIL import ImageTk,Image
 import requests
 import json
+import os
 
 def weather_launch():
+    sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'images', 'sun.ico'))
+    print(sun_icon_path)
+
     weather_window = Toplevel()
     weather_window.title('Weather App')
-    weather_window.iconbitmap('images/sun.ico')
+    weather_window.iconbitmap(sun_icon_path)
     weather_window.geometry("500x500")
 
     def zipLookup():

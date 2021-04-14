@@ -9,9 +9,12 @@ from programs.message import message_launch
 from programs.db import db_launch
 from programs.weather import weather_launch
 
+#path for icon needs to be set w/ variables otherwise python/windows can't both find
+sun_icon_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), 'images', 'sun.ico'))
+
 root = Tk()
 root.title('Python GUI Examples')
-#root.iconbitmap('images/sun.ico')
+root.iconbitmap(sun_icon_path)
 
 main_label = Label(root, text="Select an example program from the buttons below: ", font=("Verdana 10 bold"))
 
