@@ -33,7 +33,7 @@ def db_launch():
         print("DB created w/ Table!")
     else:
         #if db already exists, establish connection and cursor variables
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
         cursor = connection.cursor()
         print("DB already exists, connection established!")
 
@@ -44,7 +44,7 @@ def db_launch():
         query_label.destroy()
 
         # Create a database or connect to one, must re-establish in function
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
 
@@ -78,7 +78,7 @@ def db_launch():
     #submission function
     def submit():
         # Create a database or connect to one, must re-establish in function
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
 
         #create cursor to access db
         cursor = connection.cursor()
@@ -113,7 +113,7 @@ def db_launch():
         global query_label
 
         # Create a database or connect to one, must re-establish in function
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
 
@@ -140,7 +140,7 @@ def db_launch():
     #update function for button in edit window
     def update():
         # Create a database or connect to one, must re-establish in function
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
 
@@ -183,7 +183,7 @@ def db_launch():
         edit_window.geometry("400x300")
 
         # Create a database or connect to one, must re-establish in function
-        connection = sqlite3.connect('programs/database/address_book.db')
+        connection = sqlite3.connect(db_path)
         #create cursor to access db
         cursor = connection.cursor()
 
