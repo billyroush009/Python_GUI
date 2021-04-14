@@ -11,7 +11,7 @@ from programs.weather import weather_launch
 
 root = Tk()
 root.title('Python GUI Examples')
-root.iconbitmap('images/sun.ico')
+#root.iconbitmap('images/sun.ico')
 
 main_label = Label(root, text="Select an example program from the buttons below: ", font=("Verdana 10 bold"))
 
