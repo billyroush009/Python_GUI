@@ -17,6 +17,7 @@ def db_launch():
     print(db_path)
     db_path_cleaned = db_path.strip()
     print(db_path_cleaned)
+    print(os.stat(db_path))
 
     # If the database doesn't exist, creates w/ table and fields
     if not path.exists(db_path_cleaned.strip()):
